@@ -1,4 +1,7 @@
 {
-    "name" : "work_tool",
-    "version" : "0.0.1"
+  "name": "project_static_zip",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
 }
