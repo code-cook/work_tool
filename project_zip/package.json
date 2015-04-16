@@ -2,6 +2,7 @@
   "name": "project_static_zip",
   "version": "0.0.1",
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-uglify": "*"
   }
 }
