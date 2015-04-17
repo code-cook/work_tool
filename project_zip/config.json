@@ -7,10 +7,13 @@
     "/main.js"
   ],
 
-  "cssSrc" : "",
-  "cssDist" : "",
+  "cssSrc" : "D:/2015/seasons/6/css",
+  "cssDist" : "D:/gulp_test",
+  "cssName" : "cssmin-c.css",
   "cssFilter" : [
-
+    "/reset.css",
+    "/animate.css",
+    "/main.css"
   ],
 
   "imageSrc" : "",
