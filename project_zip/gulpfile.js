@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var cssmin = require('gulp-cssmin');
 var _ = require('lodash');
 
 var config = require('./config.json');
@@ -22,6 +23,11 @@ gulp.task('jsmin', function() {
     .pipe(gulp.dest(config.jsDist)); // 指定输出
 });
 
+gulp.task('cssmin', function(){
+
+});
+
 gulp.task('default', function(a){
   gulp.run('jsmin');
+  gulp.run('cssmin');
 });
