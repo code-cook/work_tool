@@ -9,7 +9,9 @@ var path = {
 
 gulp.task('compress', function() {
   return gulp.src(basePath + path.js) // 指定源
-    .pipe(uglify())
+    .pipe(uglify({
+      compress: true
+    }))
     .pipe(gulp.dest(basePath + '/dist')); // 指定输出
 });
 
