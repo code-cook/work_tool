@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var _ = require('lodash');
 
@@ -15,6 +16,7 @@ gulp.task('jsmin', function() {
     src_arr.push(config.jsSrc + '/**/*.js');
   }
   return gulp.src(src_arr) // 指定源
+    .pipe(concat(config.jsName))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.jsDist)); // 指定输出

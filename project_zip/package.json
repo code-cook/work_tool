@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "*",
     "lodash": "^3.7.0"

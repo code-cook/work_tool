@@ -1,14 +1,18 @@
 {
   "jsSrc" : "D:/2015/seasons/6/js",
   "jsDist" : "D:/gulp_test",
+  "jsName" : "uglify-c.js",
   "jsFilter" : [
+    "/adaptUILayout.js",
     "/main.js"
   ],
+
   "cssSrc" : "",
   "cssDist" : "",
   "cssFilter" : [
 
   ],
+
   "imageSrc" : "",
   "imageDist" : "",
   "imageFilter" : [
