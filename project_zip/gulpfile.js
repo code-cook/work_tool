@@ -8,8 +8,8 @@ var config = require('./config.json');
 gulp.task('jsmin', function() {
   var src_arr = [];
   if(_.isArray(config.jsFilter) && config.jsFilter.length > 0){
-    _.each(config.jsFilter, function(){
-      src_arr.push(config.jsSrc + this);  
+    _.each(config.jsFilter, function(item, index){
+      src_arr.push(config.jsSrc + item);  
     });
   }else{
     src_arr.push(config.jsSrc + '/**/*.js');

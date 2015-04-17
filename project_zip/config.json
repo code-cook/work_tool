@@ -2,7 +2,7 @@
   "jsSrc" : "D:/2015/seasons/6/js",
   "jsDist" : "D:/gulp_test",
   "jsFilter" : [
-
+    "/main.js"
   ],
   "cssSrc" : "",
   "cssDist" : "",
