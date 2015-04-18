@@ -5,7 +5,7 @@ Project Zip
 
 然后在config.json中进行路径配置，执行 gulp 命令
 
-###1、JS压缩合并-参数说明
+###1、JS压缩合并-参数说明 `gulp jsmin`
   
   jsSrc: 指定js文件存放的根目录
 
@@ -15,10 +15,10 @@ Project Zip
 
   jsFilter: 指定js文件处理列表，如果不指定，默认压缩合并jsSrc下所有js文件
 
-`javascript`
-  gulp jsmin
+  
 
-###2、CSS压缩合并-参数说明
+
+###2、CSS压缩合并-参数说明 `gulp cssmin`
   
   cssSrc: 指定css文件存放的根目录
   
