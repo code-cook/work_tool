@@ -1,7 +1,9 @@
 Project Zip
 ---
 
-在config.json中进行路径配置，然后执行 gulp 命令
+优先执行 npm install 进行依赖安装
+
+然后在config.json中进行路径配置，执行 gulp 命令
 
 ###1、JS压缩合并-参数说明
   
@@ -12,6 +14,9 @@ Project Zip
   jsName: 指定js文件输出名称，会自动添加min suffix
 
   jsFilter: 指定js文件处理列表，如果不指定，默认压缩合并jsSrc下所有js文件
+
+`javascript`
+  gulp jsmin
 
 ###2、CSS压缩合并-参数说明
   
