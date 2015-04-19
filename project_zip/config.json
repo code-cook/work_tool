@@ -1,19 +1,24 @@
 {
-  "jsSrc" : "D:/2015/seasons/6/js",
-  "jsDist" : "D:/gulp_test",
-  "jsName" : "uglify-c.js",
+  "jsSrc" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1/js",
+  "jsDist" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1/js",
+  "jsName" : "lib.js",
   "jsFilter" : [
-    "/adaptUILayout.js",
+    "/jquery.fancybox/jquery.fancybox.js",
+    "/jquery.bxslider/jquery.bxslider.min.js",
+    "/jquery.mCustomScrollbar/jquery.mCustomScrollbar.min.js",
     "/main.js"
   ],
 
-  "cssSrc" : "D:/2015/seasons/6/css",
-  "cssDist" : "D:/gulp_test",
-  "cssName" : "cssmin-c.css",
+  "cssSrc" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1",
+  "cssDist" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1/css",
+  "cssRoot" : "D:/dongfeng",
+  "cssName" : "lib.css",
   "cssFilter" : [
-    "/reset.css",
-    "/animate.css",
-    "/main.css"
+    "/js/jquery.fancybox/jquery.fancybox.css",
+    "/js/jquery.bxslider/jquery.bxslider.css",
+    "/js/jquery.mCustomScrollbar/jquery.mCustomScrollbar.css",
+    "/js/video-js/video-js.min.css",
+    "/css/main.css"
   ],
 
   "imageSrc" : "",

@@ -3,6 +3,8 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
+//var imagemin = require('gulp-imagemin');
+//var pngquant = require('imagemin-pngquant');
 var _ = require('lodash');
 
 var config = require('./config.json');
@@ -32,11 +34,20 @@ gulp.task('cssmin', function(){
   }else{
     src_arr.push(config.cssSrc + '/**/*.css');
   }
-  return gulp.src(src_arr) 
+  return gulp.src(src_arr)
+    .pipe(minifycss({  
+      root: config.cssRoot
+    }))
     .pipe(concat(config.cssName))
-    .pipe(minifycss({}))
+    .pipe(minifycss({
+      keepSpecialComments: 0,
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.cssDist));
+});
+
+gulp.task('imagemin', function(){
+  
 });
 
 gulp.task('default', function(a){
