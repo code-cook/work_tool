@@ -9,6 +9,12 @@ var _ = require('lodash');
 
 var config = require('./config.json');
 
+/**
+ * JS 文件合并压缩
+ * @author codecook
+ * @param  {Array}  ) {             var src_arr [description]
+ * @return {[type]}   [description]
+ */
 gulp.task('jsmin', function() {
   var src_arr = [];
   if(_.isArray(config.jsFilter) && config.jsFilter.length > 0){
@@ -25,6 +31,12 @@ gulp.task('jsmin', function() {
     .pipe(gulp.dest(config.jsDist)); // 指定输出
 });
 
+/**
+ * CSS 文件合并压缩 
+ * @author codecook
+ * @param  {Array}  ){               var src_arr [description]
+ * @return {[type]}     [description]
+ */
 gulp.task('cssmin', function(){
   var src_arr = [];
   if(_.isArray(config.cssFilter) && config.cssFilter.length > 0){
@@ -40,12 +52,22 @@ gulp.task('cssmin', function(){
     }))
     .pipe(concat(config.cssName))
     .pipe(minifycss({
-      keepSpecialComments: 0,
+      aggressiveMerging: false,
+      keepBreaks: true,
+      mediaMerging: false,
+      compatibility: 'ie7',
+      keepSpecialComments: 0
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.cssDist));
 });
 
+/**
+ * 图片优化
+ * @author codecook
+ * @param  {[type]} ){               } [description]
+ * @return {[type]}     [description]
+ */
 gulp.task('imagemin', function(){
   
 });
