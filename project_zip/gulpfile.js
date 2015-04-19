@@ -48,16 +48,14 @@ gulp.task('cssmin', function(){
   }
   return gulp.src(src_arr)
     .pipe(minifycss({  
-      root: config.cssRoot
-    }))
-    .pipe(concat(config.cssName))
-    .pipe(minifycss({
+      root: config.cssRoot,
       aggressiveMerging: false,
-      keepBreaks: true,
+      keepBreaks: false,
       mediaMerging: false,
       compatibility: 'ie7',
       keepSpecialComments: 0
     }))
+    .pipe(concat(config.cssName))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.cssDist));
 });
