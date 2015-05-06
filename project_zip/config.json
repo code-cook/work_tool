@@ -5,6 +5,7 @@
   "jsFilter" : [
     "/jquery.fancybox/jquery.fancybox.js",
     "/jquery.bxslider/jquery.bxslider.min.js",
+    "/swfobject.js",
     "/jquery.mCustomScrollbar/jquery.mCustomScrollbar.min.js",
     "/main.js"
   ],
