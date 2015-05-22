@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=640, user-scalable=no">
     <title>H5获取地理位置信息</title>
+    <style type="text/css">
+      body{font-size: 24px;}
+    </style>
     <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
     <script src="geolocation.js"></script>
     <script>
@@ -16,7 +20,7 @@
           return false;
         }
 
-        console.log(obj);
+        console.log($body.html(JSON.stringify(obj)));
       });
     }
     </script>

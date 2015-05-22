@@ -30,8 +30,11 @@
   }
 
   Geolocation.prototype._showPosition = function(position){
-    
-
+    this.position = {
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+      accuracy: position.coords.accuracy 
+    }
     this.pullFlag = true;
   }
 

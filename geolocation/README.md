@@ -15,8 +15,14 @@ Demo:
           return false;
         }
 
-        console.log(obj);
+        console.log($body.html(JSON.stringify(obj)));
       });
     }
   </script>
 ```
+
+纬度： obj.latitude
+
+经度： obj.longitude
+
+位置精度: obj.accuracy
