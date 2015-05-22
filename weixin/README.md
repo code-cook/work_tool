@@ -1,6 +1,8 @@
 喝前摇一摇
 ---
 
+##Shake.js
+
 ###options
   
   callback: 摇动回调
