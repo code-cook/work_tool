@@ -68,8 +68,9 @@ gulp.task('cssmin', function(){
  * @return {[type]}     [description]
  */
 gulp.task('imagemin', function(){
-   return gulp.src( config.imageSrc + '/*')
+   return gulp.src( config.imageSrc + '/**/*')
     .pipe(imagemin({
+        optimizationLevel: 7,
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
