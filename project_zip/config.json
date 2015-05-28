@@ -1,30 +1,19 @@
 {
-  "jsSrc" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1/js",
-  "jsDist" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1/js",
+  "jsSrc" : "./test/js",
+  "jsDist" : "./test/js",
   "jsName" : "lib.js",
   "jsFilter" : [
-    "/jquery.fancybox/jquery.fancybox.js",
-    "/jquery.bxslider/jquery.bxslider.min.js",
-    "/swfobject.js",
-    "/jquery.mCustomScrollbar/jquery.mCustomScrollbar.min.js",
-    "/main.js"
+
   ],
 
-  "cssSrc" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1",
-  "cssDist" : "D:/dongfeng/minisite/default/vehicles/vow/pc/v1/css",
-  "cssRoot" : "D:/dongfeng",
+  "cssSrc" : "./test/css",
+  "cssDist" : "./test/css",
+  "cssRoot" : "./test",
   "cssName" : "lib.css",
   "cssFilter" : [
-    "/js/jquery.fancybox/jquery.fancybox.css",
-    "/js/jquery.bxslider/jquery.bxslider.css",
-    "/js/jquery.mCustomScrollbar/jquery.mCustomScrollbar.css",
-    "/js/video-js/video-js.min.css",
-    "/css/main.css"
+
   ],
 
-  "imageSrc" : "",
-  "imageDist" : "",
-  "imageFilter" : [
-
-  ]
+  "imageSrc" : "./test/images",
+  "imageDist" : "./test/images/dist"
 }

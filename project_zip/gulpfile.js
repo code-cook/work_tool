@@ -3,8 +3,9 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
-//var imagemin = require('gulp-imagemin');
-//var pngquant = require('imagemin-pngquant');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+
 var _ = require('lodash');
 
 var config = require('./config.json');
@@ -67,10 +68,17 @@ gulp.task('cssmin', function(){
  * @return {[type]}     [description]
  */
 gulp.task('imagemin', function(){
-  
+   return gulp.src( config.imageSrc + '/*')
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
+    }))
+    .pipe(gulp.dest(config.imageDist));
 });
 
 gulp.task('default', function(a){
   gulp.run('jsmin');
   gulp.run('cssmin');
+  gulp.run('imagemin');
 });
