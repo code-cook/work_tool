@@ -62,7 +62,7 @@ gulp.task('cssmin', function(){
 });
 
 /**
- * 图片优化
+ * 图片优化 [ 目前发现 只对png 进行了压缩  ， jpg 没有压缩]
  * @author codecook
  * @param  {[type]} ){               } [description]
  * @return {[type]}     [description]
