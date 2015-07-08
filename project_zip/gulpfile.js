@@ -4,6 +4,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
+var jpegtran = require('imagemin-jpegtran');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 
@@ -69,20 +70,24 @@ gulp.task('cssmin', function(){
  * @return {[type]}     [description]
  */
 gulp.task('imagemin', function(){
+
    return gulp.src( config.imageSrc + '/**/*')
-    .pipe(cache(imagemin({
-        optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-        progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-        interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-        multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
+    .pipe(imagemin({
+        optimizationLevel: 3, //类型：Number  默认：3  取值范围：0-7（优化等级）
+        progressive: true,    //类型：Boolean 默认：false 无损压缩jpg图片
+        interlaced: true,     //类型：Boolean 默认：false 隔行扫描gif进行渲染
+        multipass: true,      //类型：Boolean 默认：false 多次优化svg直到完全优化
         svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
-    })))
+        //quality: '65-80', 
+        //speed: 4,
+        use: [jpegtran(), pngquant()]
+    }))
     .pipe(gulp.dest(config.imageDist));
+
 });
 
 gulp.task('default', function(a){
-  gulp.run('jsmin');
-  gulp.run('cssmin');
+  //gulp.run('jsmin');
+  //gulp.run('cssmin');
   gulp.run('imagemin');
 });
