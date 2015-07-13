@@ -8,7 +8,7 @@
 
   "cssSrc" : "./test/css",
   "cssDist" : "./test/css",
-  "cssRoot" : "./test",
+  "cssRoot" : "http://www.baidu.com",
   "cssName" : "lib.css",
   "cssFilter" : [
 

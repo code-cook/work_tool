@@ -2,7 +2,7 @@
   "name": "project_static_zip",
   "version": "0.0.1",
   "devDependencies": {
-    "gulp": "^3.8.11",
+    "gulp": "*",
     "gulp-cache": "^0.2.9",
     "gulp-concat": "^2.5.2",
     "gulp-imagemin": "^2.2.1",

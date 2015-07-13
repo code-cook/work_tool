@@ -28,7 +28,7 @@ gulp.task('jsmin', function() {
     src_arr.push(config.jsSrc + '/**/*.js');
   }
   return gulp.src(src_arr) // 指定源
-    .pipe(concat(config.jsName))
+    //.pipe(concat(config.jsName))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.jsDist)); // 指定输出
@@ -51,14 +51,14 @@ gulp.task('cssmin', function(){
   }
   return gulp.src(src_arr)
     .pipe(minifycss({  
-      root: config.cssRoot,
+      //root: config.cssRoot,
       aggressiveMerging: false,
       keepBreaks: false,
       mediaMerging: false,
       compatibility: 'ie7',
       keepSpecialComments: 0
     }))
-    .pipe(concat(config.cssName))
+    //.pipe(concat(config.cssName))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(config.cssDist));
 });
