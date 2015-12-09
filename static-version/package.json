@@ -1,0 +1,16 @@
+{
+  "name": "static-version",
+  "version": "1.0.0",
+  "description": "为html内部静态资源[css, js]添加版本号",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp version"
+  },
+  "author": "tangsj",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.0"
+  }
+}

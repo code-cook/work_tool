@@ -33,6 +33,7 @@ function loadDir(path, args){
   }(path);
 }
 loadDir(Path.join(__dirname, 'images'), list);
+
 !fs.existsSync(outFliePath) && fs.mkdirSync(outFliePath);
 fs.writeFile('js/manifest.json', JSON.stringify(list, null, 2), function(){
   console.log('manifest.json create success.');
