@@ -27,3 +27,7 @@
   在微信中使用的些工具
   
   shake.js [ 摇一摇 ]
+
+### static-version
+  
+  给Html文件中的script 和 link 添加静态资源版本号 【 Gulp 】
