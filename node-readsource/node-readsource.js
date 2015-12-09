@@ -1,3 +1,6 @@
+/**
+ * author: tangsj
+ */
 var fs = require('fs');
 var Path = require('path');
 
