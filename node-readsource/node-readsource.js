@@ -7,6 +7,7 @@ var Path = require('path');
 var list = [], i = 0;
 
 var basePath = Path.join(__dirname, '/');
+var outFliePath= Path.join(__dirname, '/js');
 /**
  * 生成静态资源列表
  */
@@ -32,7 +33,7 @@ function loadDir(path, args){
   }(path);
 }
 loadDir(Path.join(__dirname, 'images'), list);
-
+!fs.existsSync(outFliePath) && fs.mkdirSync(outFliePath);
 fs.writeFile('js/manifest.json', JSON.stringify(list, null, 2), function(){
   console.log('manifest.json create success.');
 });
