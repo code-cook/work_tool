@@ -41,7 +41,7 @@ function VersionPlugin(arg){
         for(var key in arg){
           param.push(key + '=' + arg[key]);
         }
-        return tag + '"' + src + '@' + param.join('&') + '"';
+        return tag + '"' + src + '?' + param.join('&') + '"';
       });
     }
 
@@ -55,7 +55,7 @@ function VersionPlugin(arg){
 gulp.task('version', function(){
   return gulp.src('./html/**/*.html')
           .pipe(VersionPlugin({
-            version: '1.0.1'
+            version: '1.0.4'
           }))
           .pipe(gulp.dest('./html'));
 });
