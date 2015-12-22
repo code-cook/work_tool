@@ -21,7 +21,7 @@ var Utils = {
         var str = url.substr(1);
         strs = str.split("&");
         for(var i = 0; i < strs.length; i ++) {
-           param[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+           param[strs[i].split("=")[0]]= decodeURIComponent(strs[i].split("=")[1]);
         }
      }
      return param;
