@@ -36,7 +36,7 @@ function VersionPlugin(arg){
     for(var type in ASSET_REG){
       content = content.replace(ASSET_REG[type], function (str, tag, src) {
         //console.log(str, tag, src);
-        src = src.replace(/@.*$/, '');
+        src = src.replace(/\?.*$/, '');
         var param = []
         for(var key in arg){
           param.push(key + '=' + arg[key]);
@@ -55,7 +55,7 @@ function VersionPlugin(arg){
 gulp.task('version', function(){
   return gulp.src('./html/**/*.html')
           .pipe(VersionPlugin({
-            version: '1.0.4'
+            version: '1.0.5'
           }))
           .pipe(gulp.dest('./html'));
 });
