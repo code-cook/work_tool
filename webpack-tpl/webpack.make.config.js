@@ -6,7 +6,6 @@ var autoprefixer      = require('autoprefixer');
 var cssimport         = require('postcss-import');
 var px2rem            = require('postcss-px2rem');
 
-
 var uglifyJsPlugin    = webpack.optimize.UglifyJsPlugin;
 
 var makeConfig = options => {
@@ -50,8 +49,7 @@ var makeConfig = options => {
         },
         {
           test: /\.css$/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'postcss-loader')
-          // loader: "style-loader!css-loader!postcss-loader"
+          loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
         },
         {
           test: /\.json$/,
@@ -65,13 +63,15 @@ var makeConfig = options => {
             addDependencyTo: webpack
           }),
           autoprefixer,
-          px2rem({
-            remUnit: 75
-          })
+          // px2rem({  // 视项目情况添加
+          //   remUnit: 75
+          // })
         ];
     },
     plugins: [
-      new ExtractTextPlugin('css/[contenthash:8].[name].css'),
+      new ExtractTextPlugin('css/[contenthash:8].[name].css',{
+        allChunks: true
+      }),
       new webpack.HotModuleReplacementPlugin(),
       new uglifyJsPlugin({
         compress: {
