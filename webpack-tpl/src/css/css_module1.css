@@ -1,0 +1,2 @@
+body{ border: 1px solid red;/*no*/ }
+.wrapper{ width: 640px; display: flex; }
