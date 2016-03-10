@@ -1,0 +1,14 @@
+{
+  "name": "webpack-tpl",
+  "version": "1.0.0",
+  "description": "webpack 项目开发模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tangsj",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
