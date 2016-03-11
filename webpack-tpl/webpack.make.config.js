@@ -49,7 +49,7 @@ var makeConfig = options => {
         },
         {
           test: /\.css$/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+          loader: ExtractTextPlugin.extract('css-loader!postcss-loader') // style-loader
         },
         {
           test: /\.json$/,
