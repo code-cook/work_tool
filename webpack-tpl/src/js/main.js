@@ -1,4 +1,4 @@
-// 加载 站点样式
+ // 加载 站点样式
 import '../css/main.css';
 
 import Index from './index.js';
